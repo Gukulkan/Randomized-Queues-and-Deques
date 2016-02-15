@@ -85,9 +85,9 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     private class Node {
-        Item item;
-        Node next;
-        Node prev;
+        private Item item;
+        private Node next;
+        private Node prev;
     }
 
     private class DequeIterator implements Iterator<Item>{
@@ -113,7 +113,7 @@ public class Deque<Item> implements Iterable<Item> {
 
 
     public static void main(String[] args){   // unit testing
-        Deque<String> deque = new Deque<> ();
+        Deque<String> deque = new Deque<String> ();
         while(!StdIn.isEmpty()) {
             String s = StdIn.readString();
             if(!s.equals("-")) {
